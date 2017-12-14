@@ -14,8 +14,11 @@ target 'share' do
     pod ‘UMengUShare/Social/ReducedQQ'
 # 集成新浪微博(精简版1M)
     pod ‘UMengUShare/Social/ReducedSina'
+	
 
+   pod 'TTTAttributedLabel'
   # Pods for share
+	
 
   target 'shareTests' do
     inherit! :search_paths

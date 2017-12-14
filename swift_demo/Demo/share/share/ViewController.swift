@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import TTTAttributedLabel
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var TTTLabel: TTTAttributedLabel!
+    
+    
     
     @IBAction func share(_ sender: Any) {
         UMSocialUIManager.addCustomPlatformWithoutFilted(UMSocialPlatformType(rawValue: UMSocialPlatformType.userDefine_Begin.rawValue+1)!, withPlatformIcon: #imageLiteral(resourceName: "share_icon"), withPlatformName: "复制")
@@ -25,7 +30,6 @@ class ViewController: UIViewController {
                 activityVC.excludedActivityTypes = [.airDrop]
                 self.present(activityVC, animated: true, completion: {
                     //分享回调
-                    
                 })
                 
                 break
@@ -50,6 +54,14 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let titleLabelString = "Isha Singh with"
+        let saveAttribued: NSMutableAttributedString = NSMutableAttributedString(string: titleLabelString)
+        saveAttribued.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 28), range: NSRange(location: 0, length: 4))
+        TTTLabel.delegate = self
+        TTTLabel.attributedText = saveAttribued
+//        TTTLabel.addLink(to: URL.init(string: "www.baidu.com"), with: NSRange.init(location: 0, length: 4))
+        
+        TTTLabel.addLink(toTransitInformation: ["ad": "ad"], with: NSRange.init(location: 0, length: 4))
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -57,7 +69,17 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
 
+}
+extension ViewController: TTTAttributedLabelDelegate {
+    func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
+        
+    }
+    func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWithTransitInformation components: [AnyHashable : Any]!) {
+        
+    }
 }
 

@@ -1,0 +1,16 @@
+.DS_Store
+xcuserdata
+*.xccheckout
+ResourceApp/rswift
+R.generated.swift
+ResourceApp/rswift.log
+ResourceApp/rswift-tv.log
+Pods
+fastlane/test_output
+fastlane/README.md
+fastlane/report.xml
+fastlane/settoken.sh
+rswift.xcarchive
+rswift.xcodeproj
+.build
+build

@@ -255,7 +255,7 @@ av.buttonTapped = {logger.buttonTapped(index: $0)} // 对logger变量进行捕�
 av.fire()
 logger.taps
 
-// inout 参数和可变方法
+// inout 参数和可变方法 不能改变只读属性
 // inout参数将一个值传递给函数，函数可以改变这个值，然后将原来的值替换掉，并从函数中传出
 // lvalue描述的是一个内存地址;rvalue描述的是一个值
 
@@ -269,7 +269,149 @@ var array = [1, 2, 3]
 increment(value: &array[0])
 array
 
-let f: Float = 1.12
-Int(1.12)
-Int(1.99999999999)
-Int(123123.123131231212)
+struct Point{
+    var x: Int
+    var y: Int
+    var squaredDistance: Int {
+        return x*x + y*y
+    }
+}
+var point = Point(x: 0, y: 0)
+increment(value: &point.x)
+point
+//increment(value: &point.squaredDistance)
+
+postfix func ++(x: inout Int) {
+    x += 1
+}
+point.x++
+point
+var dic = ["one": 1] //可选字典
+dic["one"]?++
+dic
+
+///嵌套函数和inout
+func incrementTenTimes(value: inout Int) {
+    func inc(){
+        value += 1
+    }
+    for _ in 0 ..< 10 {
+        inc()
+    }
+}
+var x = 0
+incrementTenTimes(value: &x)
+
+//func escapelncrement(value: inout Int) -> () -> () {//inout 参数不能逃逸
+//    func inc() {
+//        value += 1
+//    }
+//    return inc
+//}
+
+//& 可以将变量转换成不安全的指针
+func incref(pointer: UnsafeMutablePointer<Int>) -> () -> Int{
+    //将指针的复制存储在闭包中
+    return {
+        pointer.pointee += 1
+        return pointer.pointee
+    }
+}
+let fun: () -> Int
+do {
+    var array = [0]
+    fun = incref(pointer: &array)
+}
+//debugPrint(fun())
+
+///计算属性和下标
+struct GPSTrack{
+    private(set) var record: [(Int, Date)] = [] //外部只读，内部可写
+    var dates: [Date] {
+        return record.map{$0.1}
+    }
+    mutating func test() {
+        self.record = []
+    }
+}
+
+var gps = GPSTrack()
+//gps.record = [(1,Date())]
+//debugPrint(gps.record)
+
+///使用不同参数重载下标
+/* 自定义运算符
+左：prefix
+右：postfix
+中：infix
+ */
+let fibs = [0,1,2,3,4]
+let first = fibs[0]
+fibs[1..<1]
+
+//半有界区间
+struct RangeStart<l>{let start : l}
+struct RangeEnd<l>{let end : l}
+
+postfix operator ..<
+postfix func ..<<l>(lhs: l) -> RangeStart<l> {
+    return RangeStart(start: lhs)
+}
+
+prefix operator ..+
+prefix func ..+<l>(rhs: l) -> RangeEnd<l> {
+    return RangeEnd(end: rhs)
+}
+
+extension Collection {
+    subscript(r: RangeStart<Index>) -> SubSequence {
+        return suffix(from: r.start)
+    }
+    subscript(r: RangeEnd<Index>) -> SubSequence {
+        return prefix(upTo: r.end)
+    }
+}
+fibs[2..<]
+fibs[..+3]
+
+extension Dictionary {
+    subscript(key: Key, or defaultValue: Value) -> Value {
+        get {
+            return self[key] ?? defaultValue
+        }
+        set {
+           self[key] = newValue
+        }
+    }
+}
+
+extension Sequence where Iterator.Element: Hashable {
+    var frequencies: [Iterator.Element: Int] {
+        var result: [Iterator.Element: Int] = [:]
+        for x in self {
+            result[x, or: 0] += 1
+        }
+        return result
+    }
+}
+"hello".frequencies
+
+///自动闭包 @autoclosure
+let evens = [2,3,4]
+if !evens.isEmpty && evens[0] > 10 {//&& 会先执行左边的 然后再执行右边的
+}
+//短路求职
+func and(_ l: Bool, _ r: @autoclosure () -> Bool) -> Bool {
+    guard l else {
+        return false
+    }
+    return r()
+}
+if and(!evens.isEmpty, evens[0] > 10) {
+}
+
+func loggg(condition: Bool, message: @autoclosure ()-> String, file: String = #file, _ function: String = #function, line: Int = #line) {
+    if condition{return}
+    debugPrint("myAssert failed:\(message()),\(file):\(function)(line\(line)")
+}
+loggg(condition: false, message: "error")

@@ -14,6 +14,7 @@
 		D12B3FBF1F7A374A0077CD8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12B3FBD1F7A374A0077CD8D /* LaunchScreen.storyboard */; };
 		D12B3FCA1F7A374A0077CD8D /* iOS11Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B3FC91F7A374A0077CD8D /* iOS11Tests.swift */; };
 		D12B3FD51F7A374A0077CD8D /* iOS11UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12B3FD41F7A374A0077CD8D /* iOS11UITests.swift */; };
+		D13406931FCE8E01006DB541 /* TTTAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D13406921FCE8E01006DB541 /* TTTAttributedLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		D12B3FD01F7A374A0077CD8D /* iOS11UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS11UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D12B3FD41F7A374A0077CD8D /* iOS11UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS11UITests.swift; sourceTree = "<group>"; };
 		D12B3FD61F7A374A0077CD8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D13406911FCE8E01006DB541 /* TTTAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTAttributedLabel.h; sourceTree = "<group>"; };
+		D13406921FCE8E01006DB541 /* TTTAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTAttributedLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 			children = (
 				D12B3FB41F7A374A0077CD8D /* AppDelegate.swift */,
 				D12B3FB61F7A374A0077CD8D /* ViewController.swift */,
+				D13406901FCE8E01006DB541 /* TTTAttributedLabel */,
 				D12B3FB81F7A374A0077CD8D /* Main.storyboard */,
 				D12B3FBB1F7A374A0077CD8D /* Assets.xcassets */,
 				D12B3FBD1F7A374A0077CD8D /* LaunchScreen.storyboard */,
@@ -123,6 +127,15 @@
 				D12B3FD61F7A374A0077CD8D /* Info.plist */,
 			);
 			path = iOS11UITests;
+			sourceTree = "<group>";
+		};
+		D13406901FCE8E01006DB541 /* TTTAttributedLabel */ = {
+			isa = PBXGroup;
+			children = (
+				D13406911FCE8E01006DB541 /* TTTAttributedLabel.h */,
+				D13406921FCE8E01006DB541 /* TTTAttributedLabel.m */,
+			);
+			path = TTTAttributedLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +274,7 @@
 			files = (
 				D12B3FB71F7A374A0077CD8D /* ViewController.swift in Sources */,
 				D12B3FB51F7A374A0077CD8D /* AppDelegate.swift in Sources */,
+				D13406931FCE8E01006DB541 /* TTTAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
