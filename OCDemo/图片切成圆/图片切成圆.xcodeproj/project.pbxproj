@@ -15,6 +15,7 @@
 		D1A6EB541F74F28E002DE4B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A6EB521F74F28E002DE4B2 /* LaunchScreen.storyboard */; };
 		D1A6EB5F1F74F28E002DE4B2 /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A6EB5E1F74F28E002DE4B2 /* _____Tests.m */; };
 		D1A6EB6A1F74F28E002DE4B2 /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A6EB691F74F28E002DE4B2 /* _____UITests.m */; };
+		D1B2874F20282F6D0011BF94 /* TestLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D1B2874E20282F6D0011BF94 /* TestLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		D1A6EB651F74F28E002DE4B2 /* 图片切成圆UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "图片切成圆UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A6EB691F74F28E002DE4B2 /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		D1A6EB6B1F74F28E002DE4B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B2874D20282F6D0011BF94 /* TestLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLabel.h; sourceTree = "<group>"; };
+		D1B2874E20282F6D0011BF94 /* TestLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				D1A6EB481F74F28E002DE4B2 /* AppDelegate.m */,
 				D1A6EB4A1F74F28E002DE4B2 /* ViewController.h */,
 				D1A6EB4B1F74F28E002DE4B2 /* ViewController.m */,
+				D1B2874D20282F6D0011BF94 /* TestLabel.h */,
+				D1B2874E20282F6D0011BF94 /* TestLabel.m */,
 				D1A6EB4D1F74F28E002DE4B2 /* Main.storyboard */,
 				D1A6EB501F74F28E002DE4B2 /* Assets.xcassets */,
 				D1A6EB521F74F28E002DE4B2 /* LaunchScreen.storyboard */,
@@ -275,6 +280,7 @@
 			files = (
 				D1A6EB4C1F74F28E002DE4B2 /* ViewController.m in Sources */,
 				D1A6EB491F74F28E002DE4B2 /* AppDelegate.m in Sources */,
+				D1B2874F20282F6D0011BF94 /* TestLabel.m in Sources */,
 				D1A6EB461F74F28E002DE4B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +515,7 @@
 				D1A6EB701F74F28E002DE4B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1A6EB711F74F28E002DE4B2 /* Build configuration list for PBXNativeTarget "图片切成圆Tests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +524,7 @@
 				D1A6EB731F74F28E002DE4B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1A6EB741F74F28E002DE4B2 /* Build configuration list for PBXNativeTarget "图片切成圆UITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +533,7 @@
 				D1A6EB761F74F28E002DE4B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

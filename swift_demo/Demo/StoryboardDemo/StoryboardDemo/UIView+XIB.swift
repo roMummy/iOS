@@ -8,15 +8,15 @@
 
 import Foundation
 import UIKit
-extension UILabel {
-    @IBInspectable var localizeKey: String? {//本地化字符串
-        set{
-            guard let newValue = newValue else {return}
-            text = NSLocalizedString(newValue, comment: "")
-        }
-        get{return text}
-    }
-}
+//extension UILabel {
+//    @IBInspectable var localizeKey: String? {//本地化字符串
+//        set{
+//            guard let newValue = newValue else {return}
+//            text = NSLocalizedString(newValue, comment: "")
+//        }
+//        get{return text}
+//    }
+//}
 ////给UIImageView添加圆角设置
 //extension UIImageView {
 //    @IBInspectable var cornerRedius: CGFloat {

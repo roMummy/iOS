@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "TestLabel.h"
 @interface ViewController ()
 
 @end
@@ -16,10 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor cyanColor];
     UIImageView * imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
 //    imageView.image =  [UIImage imageNamed:@"1"];
-    [self.view addSubview:imageView];
+//    [self.view addSubview:imageView];
     
 //    UIImage *newImg = [ViewController resizeImage:[UIImage imageNamed:@"1"] size:CGSizeMake(120, 120)];
     UIImage *maskImg = [UIImage imageNamed:@"1"];
@@ -29,6 +29,15 @@
     // 開始做裁切(Clip)圖片
     imageView.image = newImg;
     // Do any additional setup after loading the view, typically from a nib.
+    
+    TestLabel * label = [[TestLabel alloc] init];
+    label.frame = CGRectMake(100, 100, 400, 200);
+    label.text = @"和家欢乐";
+    label.font = [UIFont systemFontOfSize:40];
+    [self.view addSubview:label];
+//    label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];    //设置文本的阴影色彩和透明度。
+//    label.shadowOffset = CGSizeMake(1, 1);
+    
 }
 
 

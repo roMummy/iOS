@@ -103,7 +103,7 @@ extension ProfileViewController: UITableViewDelegate {
             navBarTintColor = UIColor.white
             statusBarShouldLight = true
         }
-        setNeedsStatusBarAppearanceUpdate()
+        setNeedsStatusBarAppearanceUpdate()//改状态栏颜色的
         
         
         
