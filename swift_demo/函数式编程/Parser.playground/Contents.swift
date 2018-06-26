@@ -12,10 +12,11 @@ struct Parser<Token, Result>{
     let p: (ArraySlice<Token>) -> AnySequence<(Result, ArraySlice<Token>)>//传入一个符号数组的切片，返回一个包含处理结果和剩余符号的多元组
 }
 
+
 func parseA() -> Parser<Character, Character> {
     let a: Character = "a"
-    return Parser{x in
-        guard let (head, tail) = x.decompose where head == a else {
+    return Parser{x in        
+        guard let (head, tail) = x, head == a else {
             return none()
         }
         return one(x: tail)

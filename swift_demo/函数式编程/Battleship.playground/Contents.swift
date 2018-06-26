@@ -7,7 +7,7 @@ var str = "Hello, playground"
 /*
  * 在swift中函数是一等值，函数式编程的核心观念就是函数是一个值
  */
-
+String
 typealias Distance = Double
 //区域
 typealias Region = (Position) -> Bool

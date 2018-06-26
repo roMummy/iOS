@@ -1,0 +1,25 @@
+PODS:
+  - PromiseKit (4.0.3):
+    - PromiseKit/Foundation (= 4.0.3)
+    - PromiseKit/QuartzCore (= 4.0.3)
+    - PromiseKit/UIKit (= 4.0.3)
+  - PromiseKit/CoreLocation (4.0.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (4.0.3)
+  - PromiseKit/Foundation (4.0.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.0.3):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.0.3):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - PromiseKit
+  - PromiseKit/CoreLocation
+
+SPEC CHECKSUMS:
+  PromiseKit: dfe8fcc6445674fb23378d89990838c1cbdbf05a
+
+PODFILE CHECKSUM: d9b1e88082748d0ae70f701f51db72f3241968e6
+
+COCOAPODS: 1.0.1
