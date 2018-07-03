@@ -92,13 +92,30 @@ public extension RedBlackTree {
             try right.forEach(body)
         }
     }
-    
+    ///插入一个元素
     @discardableResult
     mutating func insert(_ element: Element) -> (inserted: Bool, memberAfterInsert: Element) {
         let (tree, old) = inserting(element)
         self = tree
         return (old == nil, old ?? element)
     }
+//    ///移除一个元素
+//    @discardableResult
+//    mutating func remove(_ element: Element) -> (removed: Bool, memberAfterRemove: Element) {
+//        let (tree, old) = removeing(element)
+//        self = tree
+//        return (old == nil, old ?? element)
+//    }
+//
+//    func removeing(_ element: Element) -> (tree: RedBlackTree, existingMember: Element?) {
+//        let (tree, old) = _removeing(element)
+//        switch tree {
+//        case let .node(.red, value, left, right):
+//            return (.node(.black, value, left, right), old)
+//        default:
+//            return (tree, old)
+//        }
+//    }
     
     func inserting(_ element: Element) -> (tree: RedBlackTree, existingMember: Element?) {
         let (tree, old) = _inserting(element)
@@ -108,7 +125,6 @@ public extension RedBlackTree {
         default:
             return (tree, old)
         }
-        
     }
     ///“查找指定元素可以作为叶子节点被插入到树中的位置”
     func _inserting(_ element: Element) -> (tree: RedBlackTree, old: Element?) {
@@ -133,6 +149,31 @@ public extension RedBlackTree {
             return (balanced(color, value, left, r), nil)
         }
     }
+    
+    
+//    func _removeing(_ element: Element) -> (tree: RedBlackTree, old: Element?) {
+//        let oldTree = self
+//        switch self {
+//        case .empty:
+//            //空树
+//            return (oldTree, nil)
+//        case let .node(color, value, left, right) where value == element:
+//            //右边为空 返回左边的节点
+//            if right.value(preceding: value).found == false {
+//                return (.node(color, value, .empty, right), value)
+//            }
+//            //左边为空，返回右边的节点
+//            if left.value(following: value).found == false {
+//                return (.node(color, value, left, .empty), value)
+//            }
+//            if right.value(preceding: value).found == false &&  left.value(following: value).found == false{
+//                return (.node(color, value, .empty, .empty), nil)
+//            }
+//            return (.node(color, value, left, right), value)
+//        default:
+//            return (oldTree, element)
+//        }
+//    }
     
     ///平衡模式，按照红黑树的方式排列
     func balanced(_ color: Color, _ value: Element, _ left: RedBlackTree, _ right: RedBlackTree) -> RedBlackTree {
@@ -216,11 +257,6 @@ public extension RedBlackTree {
         }
     }
     
-    ///移除一个元素
-//    @discardableResult
-//    mutating func remove(_ element: Element) -> (removed: Bool, memberAfterRemove: Element) {
-//
-//    }
 }
 ///实现集合的功能
 extension RedBlackTree: Collection {
@@ -234,6 +270,7 @@ extension RedBlackTree: Collection {
         return i.value!
     }
 }
+
 ///实现index和formindex
 extension RedBlackTree: BidirectionalCollection {
     public func formIndex(after i: inout RedBlackTree<Element>.Index) {
@@ -321,12 +358,19 @@ extension RedBlackTree: SortedSet {
 //    .node(.red, 3, .empty, .empty))
 //
 //print(smallTree)
+
 //
 var set = RedBlackTree<Int>.empty
 for i in 1..<30 {
     set.insert(i)
 }
-//print(set)
+print(set)
+//set.remove(8)
+print(set)
+
 let sset = set.lazy.filter{$0 % 2 == 0}.map{"\($0)"}.joined(separator: ",")
 print(sset)
+
+
+
 
