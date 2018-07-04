@@ -103,6 +103,24 @@ public struct RedBlackTree<Element: Comparable>: SortedSet {
         precondition(index.isValid(for: root))
         return index.path.last!.value!.value
     }
+    public struct Iterator: IteratorProtocol {
+        let tree: RedBlackTree
+        var index: RedBlackTree.Index
+        
+        init(_ tree: RedBlackTree) {
+            self.tree = tree
+            self.index = tree.startIndex
+        }
+        public mutating func next() -> Element? {
+            if index.path.isEmpty {
+                return nil
+            }
+            defer {
+                index.formSuccessor()
+            }
+            return index.path.last!.value!.value
+        }
+    }
 }
 extension RedBlackTree.Node {
     func forEach(_ body: (Element) throws -> Void) rethrows {
@@ -383,6 +401,10 @@ extension RedBlackTree{
         self.formIndex(before: &result)
         return result
     }
+    
+    public func makeIterator() -> RedBlackTree<Element>.Iterator {
+        return Iterator(self)
+    }
 }
 
 
@@ -391,3 +413,5 @@ for item in 0...20 {
     set.insert(item)
 }
 print(set)
+
+
