@@ -80,7 +80,5 @@ struct MyCar: Vehicel {
     mutating func changeColor() {
         color = .red
     }
-    
-    
 }
 
