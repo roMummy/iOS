@@ -1,5 +1,3 @@
-//: Playground - noun: a place where people can play
-
 import UIKit
 import PlaygroundSupport
 
@@ -7,52 +5,39 @@ extension Notification {
     struct UserInfoKey<ValueType>: Hashable {
         let key: String
     }
+    
     func getUserInfo<T>(for key: Notification.UserInfoKey<T>) -> T {
         return userInfo![key] as! T
     }
 }
 extension Notification.Name {
-    static let toDoStoreDidChangeNotification = Notification.Name(rawValue: "com.app.ToDoStoreDidChangeNotification")
+    static let toDoStoreDidChangedNotification = Notification.Name(rawValue: "com.onevcat.app.ToDoStoreDidChangedNotification")
 }
-
 extension Notification.UserInfoKey {
-    static var toDoStoreDidChangedBehaviorKey: Notification.UserInfoKey<ToDoStore.ChangeBehavior> {
-        return Notification.UserInfoKey(key: "com.app.com.app.ToDoStoreDidChangeNotification.ChangeBehavior")
+    static var toDoStoreDidChangedChangeBehaviorKey: Notification.UserInfoKey<ToDoStore.ChangeBehavior> {
+        return Notification.UserInfoKey(key: "com.onevcat.app.ToDoStoreDidChangedNotification.ChangeBehavior")
     }
 }
-
 extension NotificationCenter {
-    func post<T>(name aname: NSNotification.Name, object anObject: Any?, typedUserInfo aUserInfo: [Notification.UserInfoKey<T>: T]? = nil) {
-        post(name: aname, object: anObject, userInfo: aUserInfo)
+    func post<T>(name aName: NSNotification.Name, object anObject: Any?, typedUserInfo aUserInfo: [Notification.UserInfoKey<T> : T]? = nil) {
+        post(name: aName, object: anObject, userInfo: aUserInfo)
     }
 }
 
 struct ToDoItem {
-    let id: UUID
+    
+    typealias ItemId = UUID
+    
+    let id: ItemId
     let title: String
     
     init(title: String) {
-        self.id = UUID()
+        self.id = ItemId()
         self.title = title
-    }
-}
-extension ToDoItem: Equatable {
-    public static func == (lhs: ToDoItem, rhs: ToDoItem) -> Bool {
-        return lhs.id == lhs.id
-    }
-}
-
-extension ToDoItem: Hashable {
-    var hashValue: Int {
-        return self.id.hashValue
     }
 }
 
 class ToDoStore {
-    static let shared = ToDoStore()
-    
-//    private(set) var items: [ToDoItem] = []
-    private init(){}
     
     enum ChangeBehavior {
         case add([Int])
@@ -60,42 +45,49 @@ class ToDoStore {
         case reload
     }
     
+    static let shared = ToDoStore()
+    
     static func diff(original: [ToDoItem], now: [ToDoItem]) -> ChangeBehavior {
-        let originalSet = Set<ToDoItem>(original)
-        let nowSet = Set<ToDoItem>(now)
+        let originalSet = Set(original)
+        let nowSet = Set(now)
         
-        if originalSet.isSubset(of: nowSet) {//append
+        if originalSet.isSubset(of: nowSet) { // Appended
             let added = nowSet.subtracting(originalSet)
-            let indexes = added.compactMap {now.index(of: $0)}
+            let indexes = added.compactMap { now.index(of: $0) }
             return .add(indexes)
-        }else if (nowSet.isSubset(of: originalSet)) {// remove
+        } else if (nowSet.isSubset(of: originalSet)) { // Removed
             let removed = originalSet.subtracting(nowSet)
-            let indexes = removed.compactMap {original.index(of: $0)}
+            let indexes = removed.compactMap { original.index(of: $0) }
             return .remove(indexes)
-        }else {
+        } else { // Both appended and removed
             return .reload
         }
-        
     }
     
     private var items: [ToDoItem] = [] {
         didSet {
             let behavior = ToDoStore.diff(original: oldValue, now: items)
-            NotificationCenter.default.post(name: .toDoStoreDidChangeNotification, object: self, typedUserInfo: [.toDoStoreDidChangedBehaviorKey: behavior])
+            NotificationCenter.default.post(
+                name: .toDoStoreDidChangedNotification,
+                object: self,
+                typedUserInfo: [.toDoStoreDidChangedChangeBehaviorKey: behavior]
+            )
         }
     }
+    
+    private init() {}
     
     func append(item: ToDoItem) {
         items.append(item)
     }
     
-    @discardableResult
-    func remove(item: ToDoItem) -> (isRemoved: Bool, oldItme: ToDoItem?) {
-        guard let index = items.index(of: item) else {
-            return (false, nil)
-        }
-        items.remove(at: index)
-        return (true, item)
+    func append(newItems: [ToDoItem]) {
+        items.append(contentsOf: newItems)
+    }
+    
+    func remove(item: ToDoItem) {
+        guard let index = items.index(of: item) else { return }
+        remove(at: index)
     }
     
     func remove(at index: Int) {
@@ -103,9 +95,7 @@ class ToDoStore {
     }
     
     func edit(original: ToDoItem, new: ToDoItem) {
-        guard let index = items.index(of: original) else {
-            return
-        }
+        guard let index = items.index(of: original) else { return }
         items[index] = new
     }
     
@@ -114,27 +104,25 @@ class ToDoStore {
     }
     
     func item(at index: Int) -> ToDoItem {
-        return  items[index]
+        return items[index]
     }
-    
-//    func getAll(completion: @escaping ([ToDoItem]?, Error?) -> Void?) {
-//        NetworkService.getExistingToDoItems { response, error in
-//            if let error = error {
-//                completion?(nil, error)
-//            } else {
-//                self.items = response.items
-//                completion?(response.items, nil)
-//            }
-//        }
-//    }
-    
 }
 
+extension ToDoItem: Hashable {
+    var hashValue: Int {
+        return id.hashValue
+    }
+}
+extension ToDoItem: Equatable {
+    public static func == (lhs: ToDoItem, rhs: ToDoItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
 
 private let cellIdentifier = "ToDoItemCell"
 
 class ToDoListViewController: UITableViewController {
-    var items: [ToDoItem] = []
+    
     weak var addButton: UIBarButtonItem?
     
     override func viewDidLoad() {
@@ -143,32 +131,29 @@ class ToDoListViewController: UITableViewController {
         navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .add, target: self, action: #selector(addButtonPressed))
         addButton = navigationItem.rightBarButtonItem
         
-        // 添加通知 接受模型数据变更
-        NotificationCenter.default.addObserver(self, selector: #selector(todoItemsDidChange), name: .toDoStoreDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(todoItemsDidChange), name: .toDoStoreDidChangedNotification, object: nil)
     }
     
-    // 界面更新
-    private func syncTableView (for behavior: ToDoStore.ChangeBehavior) {
+    private func syncTableView(for behavior: ToDoStore.ChangeBehavior) {
         switch behavior {
         case .add(let indexes):
-            let indexPathes = indexes.map{IndexPath.init(row: $0, section: 0)}
+            let indexPathes = indexes.map { IndexPath(row: $0, section: 0) }
             tableView.insertRows(at: indexPathes, with: .automatic)
         case .remove(let indexes):
-            let indexPathes = indexes.map{IndexPath.init(row: $0, section: 0)}
+            let indexPathes = indexes.map { IndexPath(row: $0, section: 0) }
             tableView.deleteRows(at: indexPathes, with: .automatic)
         case .reload:
             tableView.reloadData()
         }
     }
+    
     private func updateAddButtonState() {
         addButton?.isEnabled = ToDoStore.shared.count < 10
     }
     
     @objc func todoItemsDidChange(_ notification: Notification) {
-        let behavior = notification.getUserInfo(for: .toDoStoreDidChangedBehaviorKey)
-        // 更新界面
+        let behavior = notification.getUserInfo(for: .toDoStoreDidChangedChangeBehaviorKey)
         syncTableView(for: behavior)
-        // 更新按钮
         updateAddButtonState()
     }
     
@@ -183,18 +168,17 @@ class ToDoListViewController: UITableViewController {
 
 extension ToDoListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return ToDoStore.shared.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.textLabel?.text = items[indexPath.row].title
+        cell.textLabel?.text = ToDoStore.shared.item(at: indexPath.row).title
         return cell
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { _, view, done in
-            
             ToDoStore.shared.remove(at: indexPath.row)
             done(true)
         }
