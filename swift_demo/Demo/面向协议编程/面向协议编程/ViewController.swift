@@ -18,6 +18,11 @@ class ViewController: UIViewController {
                 print(user.name+user.message)
             }
         }
+        URLSessionClient().send(UserRequest(name: "123")) { (user) in
+            if let user = user {
+                user.name
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

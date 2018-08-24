@@ -21,7 +21,7 @@ struct URLSessionClient: Client {
     
     func send<T>(_ r: T, handler: @escaping (T.Response?) -> Void) where T : Request {
         let url = URL(string: host.appending(r.path))!
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: url)        
         request.httpMethod = r.method.rawValue
         
         let task = URLSession.shared.dataTask(with: request) { (data, _, error) in
