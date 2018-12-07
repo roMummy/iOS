@@ -3,7 +3,12 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/tw/Desktop/Swift/leedCode/MyPlayground.playground#CharacterRangeLen=829&amp;CharacterRangeLoc=5765&amp;EndingColumnNumber=40&amp;EndingLineNumber=279&amp;StartingColumnNumber=14&amp;StartingLineNumber=234&amp;Timestamp=550662077.031831"
+         documentLocation = "file:///Users/zq/Desktop/Swift/leedCode/MyPlayground.playground#CharacterRangeLen=829&amp;CharacterRangeLoc=5765&amp;EndingColumnNumber=40&amp;EndingLineNumber=279&amp;StartingColumnNumber=14&amp;StartingLineNumber=234&amp;Timestamp=565600153.108861"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/zq/Desktop/Swift/leedCode/MyPlayground.playground#CharacterRangeLen=38&amp;CharacterRangeLoc=8630&amp;EndingColumnNumber=36&amp;EndingLineNumber=386&amp;StartingColumnNumber=21&amp;StartingLineNumber=385&amp;Timestamp=565600153.109162"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>

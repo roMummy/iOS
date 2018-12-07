@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Stack.h"
+#import "Test.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) NSArray<__kindof UIView *> * subviews;
@@ -20,12 +21,12 @@
     Stack * stack;
     Stack<NSString *> * stringStack;
     Stack<NSMutableString *> * mStringStack;
-    
-    stack = stringStack;
-    stack = mStringStack;
-    stringStack = stack;
-//    stringStack = mStringStack; 指定类型了就不能强转
-    mStringStack = stack;
+
+//    stack = stringStack;
+//    stack = mStringStack;
+//    stringStack = stack;
+////    stringStack = mStringStack; 指定类型了就不能强转
+//    mStringStack = stack;
 //    mStringStack = stringStack;
     
     UITableView * t = [UITableView new];
@@ -39,6 +40,13 @@
     NSArray * arr = @[@"1",@"2"];    
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    Stack * stack = [Stack new];
+    indexNumber = @"hhhh";
+    NSLog(@"controller --- %@",indexNumber);
+    [stack pushObject:@"你好"];
 }
 
 - (NSString*)makeParamtersString:(NSDictionary*)parameters withEncoding:(NSStringEncoding)encoding

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B3F974821BA1B8400793974 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3F974721BA1B8400793974 /* Test.m */; };
 		D16A3E2B2100425300D0AF2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D16A3E2A2100425300D0AF2A /* AppDelegate.m */; };
 		D16A3E2E2100425300D0AF2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16A3E2D2100425300D0AF2A /* ViewController.m */; };
 		D16A3E312100425300D0AF2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D16A3E2F2100425300D0AF2A /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B3F974621BA1B8400793974 /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		1B3F974721BA1B8400793974 /* Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		D16A3E262100425300D0AF2A /* oc泛型.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "oc泛型.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D16A3E292100425300D0AF2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D16A3E2A2100425300D0AF2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				D16A3E342100425600D0AF2A /* LaunchScreen.storyboard */,
 				D16A3E372100425600D0AF2A /* Info.plist */,
 				D16A3E382100425600D0AF2A /* main.m */,
+				1B3F974621BA1B8400793974 /* Test.h */,
+				1B3F974721BA1B8400793974 /* Test.m */,
 			);
 			path = "oc泛型";
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B3F974821BA1B8400793974 /* Test.m in Sources */,
 				D16A3E5D2100429B00D0AF2A /* Stack.m in Sources */,
 				D16A3E2E2100425300D0AF2A /* ViewController.m in Sources */,
 				D16A3E392100425600D0AF2A /* main.m in Sources */,

@@ -41,6 +41,8 @@
 }
 
 - (void)moreNetword {
+    weakify(<#...#>)
+    strongify(<#...#>)
     RACSignal * hotSignal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         // 获取热门数据
         [subscriber sendNext:@"热门数据"];

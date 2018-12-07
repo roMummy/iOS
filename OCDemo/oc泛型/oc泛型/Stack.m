@@ -7,11 +7,13 @@
 //
 
 #import "Stack.h"
+#import "Test.h"
 
 @implementation Stack
 
 - (void)pushObject:(id)object {
-    NSLog(@"%@",object);
+//    indexNumber = @"1111";
+    NSLog(@"view---- %@--index %@",object,indexNumber);
 }
 - (id)popObject {
     return [Stack new];
