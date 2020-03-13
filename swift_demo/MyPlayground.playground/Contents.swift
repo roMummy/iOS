@@ -44,3 +44,17 @@ print("111")
 ss.replacingOccurrences(of: "4005$", with: "")
 
 
+
+func test() {
+  
+  for ball in 0...10 {
+    let racket = ball + 100
+    if ball + racket == 110 {
+      print(ball)
+      continue
+    }
+  }
+}
+
+test()
+

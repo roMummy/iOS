@@ -1,0 +1,11 @@
+framework module ShecareSDK {
+  umbrella header "ShecareSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module ShecareSDK.Swift {
+    header "ShecareSDK-Swift.h"
+    requires objc
+}
