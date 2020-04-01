@@ -123,6 +123,7 @@ class IteratorBoxHelper<I: IteratorProtocol>: IteratorBox<I.Element> {
 }
 let itere: IteratorBox<Int> = IteratorBoxHelper(iterator: ConstantIterator())
 
+
 ///带有Self的协议 例如Equatable
 struct MonetaryAmount: Equatable {
     var currency: String
