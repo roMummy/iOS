@@ -1,6 +1,17 @@
 import UIKit
 
-var str = "Hello, playground"
+var str = "Hello, "
+
+/*:
+
+ * asfsdf
+ * asdf
+ ###### asdf
+ 
+ # 111111
+ 
+*/
+
 
 /// 策略模式：在类中封装算法，使它们在运行时可重用和可互换。
 /// 用法：1.做同样的不同方法
