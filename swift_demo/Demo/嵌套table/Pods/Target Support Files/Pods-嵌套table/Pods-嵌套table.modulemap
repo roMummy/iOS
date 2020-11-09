@@ -1,0 +1,6 @@
+framework module Pods___table {
+  umbrella header "Pods-嵌套table-umbrella.h"
+
+  export *
+  module * { export * }
+}
