@@ -17,7 +17,7 @@ int main(int argc, const char * argv[]) {
         // NSObject 根类
         // sel 处理 llvm
         
-        NSObject *objc1 = [NSObject alloc];
+        NSObject *objc1 = [[NSObject alloc] init];
         LGPerson *objc2 = [LGPerson alloc];
         // LGPerson *objc3 = [LGPerson alloc];
 

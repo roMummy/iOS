@@ -23,11 +23,11 @@ class TableViewInputCell: UITableViewCell {
         return textField
     }()
     
-    func textFieldValueChanged(_ sender:UITextField) {
+  @objc func textFieldValueChanged(_ sender:UITextField) {
         delegate?.inputChanged(cell: self, text: sender.text ?? "")
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.contentView.addSubview(textField)
     }

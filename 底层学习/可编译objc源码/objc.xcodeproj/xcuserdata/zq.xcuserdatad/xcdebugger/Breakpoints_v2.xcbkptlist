@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C1C48A3F-D1E7-41B5-8F69-7B7242E98FC9"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC1D8B17-5BC2-4738-B75C-9523DE4BC0C7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KCObjc/main.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "main(argc, argv)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0766E540-3A51-4D96-A891-BFDE9D194939"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "runtime/objc-runtime-new.mm"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7529"
+            endingLineNumber = "7529"
+            landmarkName = "_class_createInstanceFromZone(cls, extraBytes, zone, OBJECT_CONSTRUCT_NONE)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "0766E540-3A51-4D96-A891-BFDE9D194939 - 37421697f5159d7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "class_createInstance"
+                  moduleName = "libobjc.A.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zq/Desktop/Swift/%E5%BA%95%E5%B1%82%E5%AD%A6%E4%B9%A0/%E5%8F%AF%E7%BC%96%E8%AF%91objc%E6%BA%90%E7%A0%81/runtime/objc-runtime-new.mm"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7529"
+                  endingLineNumber = "7529"
+                  offsetFromSymbolStart = "233">
+               </Location>
+               <Location
+                  uuid = "0766E540-3A51-4D96-A891-BFDE9D194939 - 4884436979ddf913"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_objc_rootAllocWithZone"
+                  moduleName = "libobjc.A.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zq/Desktop/Swift/%E5%BA%95%E5%B1%82%E5%AD%A6%E4%B9%A0/%E5%8F%AF%E7%BC%96%E8%AF%91objc%E6%BA%90%E7%A0%81/runtime/objc-runtime-new.mm"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7529"
+                  endingLineNumber = "7529"
+                  offsetFromSymbolStart = "209">
+               </Location>
+               <Location
+                  uuid = "0766E540-3A51-4D96-A891-BFDE9D194939 - fc1241ee8e3c9fa1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_object_copyFromZone(objc_object*, unsigned long, void*)"
+                  moduleName = "libobjc.A.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zq/Desktop/Swift/%E5%BA%95%E5%B1%82%E5%AD%A6%E4%B9%A0/%E5%8F%AF%E7%BC%96%E8%AF%91objc%E6%BA%90%E7%A0%81/runtime/objc-runtime-new.mm"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7529"
+                  endingLineNumber = "7529"
+                  offsetFromSymbolStart = "303">
+               </Location>
+               <Location
+                  uuid = "0766E540-3A51-4D96-A891-BFDE9D194939 - 4364486338d85f23"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "class_createInstanceFromZone"
+                  moduleName = "libobjc.A.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zq/Desktop/Swift/%E5%BA%95%E5%B1%82%E5%AD%A6%E4%B9%A0/%E5%8F%AF%E7%BC%96%E8%AF%91objc%E6%BA%90%E7%A0%81/runtime/objc-runtime-new.mm"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "7529"
+                  endingLineNumber = "7529"
+                  offsetFromSymbolStart = "237">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
