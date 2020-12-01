@@ -7,7 +7,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EC1D8B17-5BC2-4738-B75C-9523DE4BC0C7"
+            uuid = "0B4B7682-3717-4AB1-ABFC-078E6401BF25"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "KCObjc/main.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "main(argc, argv)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34BAA1DD-B19E-4424-8F45-92DDE6D6830B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -23,20 +39,20 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0766E540-3A51-4D96-A891-BFDE9D194939"
-            shouldBeEnabled = "Yes"
+            uuid = "C1340138-C5CE-43A0-926F-6E235740E542"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "runtime/objc-runtime-new.mm"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "7529"
-            endingLineNumber = "7529"
+            startingLineNumber = "7545"
+            endingLineNumber = "7545"
             landmarkName = "_class_createInstanceFromZone(cls, extraBytes, zone, OBJECT_CONSTRUCT_NONE)"
             landmarkType = "9">
             <Locations>
                <Location
-                  uuid = "0766E540-3A51-4D96-A891-BFDE9D194939 - 37421697f5159d7b"
+                  uuid = "C1340138-C5CE-43A0-926F-6E235740E542 - 37421697f5159d7b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -46,12 +62,12 @@
                   urlString = "file:///Users/zq/Desktop/Swift/%E5%BA%95%E5%B1%82%E5%AD%A6%E4%B9%A0/%E5%8F%AF%E7%BC%96%E8%AF%91objc%E6%BA%90%E7%A0%81/runtime/objc-runtime-new.mm"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "7529"
-                  endingLineNumber = "7529"
-                  offsetFromSymbolStart = "233">
+                  startingLineNumber = "7545"
+                  endingLineNumber = "7545"
+                  offsetFromSymbolStart = "404">
                </Location>
                <Location
-                  uuid = "0766E540-3A51-4D96-A891-BFDE9D194939 - 4884436979ddf913"
+                  uuid = "C1340138-C5CE-43A0-926F-6E235740E542 - 4884436979ddf913"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -61,12 +77,12 @@
                   urlString = "file:///Users/zq/Desktop/Swift/%E5%BA%95%E5%B1%82%E5%AD%A6%E4%B9%A0/%E5%8F%AF%E7%BC%96%E8%AF%91objc%E6%BA%90%E7%A0%81/runtime/objc-runtime-new.mm"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "7529"
-                  endingLineNumber = "7529"
-                  offsetFromSymbolStart = "209">
+                  startingLineNumber = "7545"
+                  endingLineNumber = "7545"
+                  offsetFromSymbolStart = "380">
                </Location>
                <Location
-                  uuid = "0766E540-3A51-4D96-A891-BFDE9D194939 - fc1241ee8e3c9fa1"
+                  uuid = "C1340138-C5CE-43A0-926F-6E235740E542 - fc1241ee8e3c9fa1"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -76,12 +92,12 @@
                   urlString = "file:///Users/zq/Desktop/Swift/%E5%BA%95%E5%B1%82%E5%AD%A6%E4%B9%A0/%E5%8F%AF%E7%BC%96%E8%AF%91objc%E6%BA%90%E7%A0%81/runtime/objc-runtime-new.mm"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "7529"
-                  endingLineNumber = "7529"
-                  offsetFromSymbolStart = "303">
+                  startingLineNumber = "7545"
+                  endingLineNumber = "7545"
+                  offsetFromSymbolStart = "474">
                </Location>
                <Location
-                  uuid = "0766E540-3A51-4D96-A891-BFDE9D194939 - 4364486338d85f23"
+                  uuid = "C1340138-C5CE-43A0-926F-6E235740E542 - 4364486338d85f23"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -91,11 +107,23 @@
                   urlString = "file:///Users/zq/Desktop/Swift/%E5%BA%95%E5%B1%82%E5%AD%A6%E4%B9%A0/%E5%8F%AF%E7%BC%96%E8%AF%91objc%E6%BA%90%E7%A0%81/runtime/objc-runtime-new.mm"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "7529"
-                  endingLineNumber = "7529"
-                  offsetFromSymbolStart = "237">
+                  startingLineNumber = "7545"
+                  endingLineNumber = "7545"
+                  offsetFromSymbolStart = "408">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "01A84846-BEB2-4D27-923E-8A0843E8D447"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

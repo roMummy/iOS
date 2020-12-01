@@ -20,6 +20,10 @@ extension Default: Decodable {
   }
 }
 //extension Default: Encodable {
+//  func encode(to encoder: Encoder) throws {
+//    var container = try encoder.singleValueContainer()
+//    wrappedValue = container.encode(to: T.Value.self) as! T.Value
+//  }
 //}
 
 extension KeyedDecodingContainer {
@@ -88,5 +92,4 @@ print(item.commentEnabled)
 print(item.state)
 print(item.type?.rawValue ?? "")
 //print(item.type == .archived)
-
 
