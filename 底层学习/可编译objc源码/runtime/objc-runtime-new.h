@@ -266,9 +266,16 @@ public:
 
 struct cache_t {
 #if CACHE_MASK_STORAGE == CACHE_MASK_STORAGE_OUTLINED
+    //macOS、模拟器 -- 主要是架构区分
+    // explicit_atomic 显示原子性，目的是为了能够 保证 增删改查时 线程的安全性
+    //等价于 struct bucket_t * _buckets;
+    //_buckets 中放的是 sel imp
+    //_buckets的读取 有提供相应名称的方法 buckets()
     explicit_atomic<struct bucket_t *> _buckets;
     explicit_atomic<mask_t> _mask;
 #elif CACHE_MASK_STORAGE == CACHE_MASK_STORAGE_HIGH_16
+    // 64位真机
+    
     explicit_atomic<uintptr_t> _maskAndBuckets;
     mask_t _mask_unused;
     
@@ -289,6 +296,8 @@ struct cache_t {
     // Ensure we have enough bits for the buckets pointer.
     static_assert(bucketsMask >= MACH_VM_MAX_ADDRESS, "Bucket field doesn't have enough bits for arbitrary pointers.");
 #elif CACHE_MASK_STORAGE == CACHE_MASK_STORAGE_LOW_4
+    // 非64位真机
+  
     // _maskAndBuckets stores the mask shift in the low 4 bits, and
     // the buckets pointer in the remainder of the value. The mask
     // shift is the value where (0xffff >> shift) produces the correct

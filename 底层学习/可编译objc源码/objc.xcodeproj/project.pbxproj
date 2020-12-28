@@ -32,6 +32,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1BEBF44C2575DFCA00308B2D /* TWPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBF44B2575DFCA00308B2D /* TWPerson.m */; };
+		1BEBF44F2575DFDF00308B2D /* TWTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEBF44E2575DFDF00308B2D /* TWTeacher.m */; };
 		393CEAC00DC69E3E000B69DE /* objc-references.mm in Sources */ = {isa = PBXBuildFile; fileRef = 393CEABF0DC69E3E000B69DE /* objc-references.mm */; };
 		393CEAC60DC69E67000B69DE /* objc-references.h in Headers */ = {isa = PBXBuildFile; fileRef = 393CEAC50DC69E67000B69DE /* objc-references.h */; };
 		39ABD72312F0B61800D1054C /* objc-weak.h in Headers */ = {isa = PBXBuildFile; fileRef = 39ABD71F12F0B61800D1054C /* objc-weak.h */; };
@@ -173,6 +175,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1BEBF44A2575DFCA00308B2D /* TWPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWPerson.h; sourceTree = "<group>"; };
+		1BEBF44B2575DFCA00308B2D /* TWPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWPerson.m; sourceTree = "<group>"; };
+		1BEBF44D2575DFDF00308B2D /* TWTeacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TWTeacher.h; sourceTree = "<group>"; };
+		1BEBF44E2575DFDF00308B2D /* TWTeacher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TWTeacher.m; sourceTree = "<group>"; };
 		393CEABF0DC69E3E000B69DE /* objc-references.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "objc-references.mm"; path = "runtime/objc-references.mm"; sourceTree = "<group>"; };
 		393CEAC50DC69E67000B69DE /* objc-references.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-references.h"; path = "runtime/objc-references.h"; sourceTree = "<group>"; };
 		39ABD71F12F0B61800D1054C /* objc-weak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "objc-weak.h"; path = "runtime/objc-weak.h"; sourceTree = "<group>"; };
@@ -396,8 +402,12 @@
 			isa = PBXGroup;
 			children = (
 				7A88076024CACD200070C15B /* main.m */,
+				1BEBF44D2575DFDF00308B2D /* TWTeacher.h */,
+				1BEBF44E2575DFDF00308B2D /* TWTeacher.m */,
 				7A88076524CACD8C0070C15B /* LGPerson.h */,
 				7A88076624CACD8C0070C15B /* LGPerson.m */,
+				1BEBF44A2575DFCA00308B2D /* TWPerson.h */,
+				1BEBF44B2575DFCA00308B2D /* TWPerson.m */,
 			);
 			path = KCObjc;
 			sourceTree = "<group>";
@@ -739,7 +749,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A88076124CACD200070C15B /* main.m in Sources */,
+				1BEBF44F2575DFDF00308B2D /* TWTeacher.m in Sources */,
 				7A88076724CACD8C0070C15B /* LGPerson.m in Sources */,
+				1BEBF44C2575DFCA00308B2D /* TWPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
