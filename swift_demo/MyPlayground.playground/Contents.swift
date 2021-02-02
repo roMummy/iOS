@@ -61,61 +61,75 @@ var str = "Hello, playground"
 
 
 
-extension Int {
-  func asDate() -> Date {
-    let timeInterval = TimeInterval(self)
-    return Date(timeIntervalSince1970: timeInterval)
-  }
+//extension Int {
+//  func asDate() -> Date {
+//    let timeInterval = TimeInterval(self)
+//    return Date(timeIntervalSince1970: timeInterval)
+//  }
+//
+//  func reMill() -> Int {
+//    return self / 1000
+//  }
+//
+//  func toMill() -> Int {
+//    return self * 1000
+//  }
+//}
+//
+//extension Date {
+//  func intervalYear(to date: Date) -> Int {
+//    let calendar = Calendar.current.dateComponents([.year], from: self, to: date)
+//    return abs(calendar.year ?? 0)
+//  }
+//
+//  func addYear(by year: Int) -> Self? {
+//    return Calendar.current.date(byAdding: .year, value: year, to: self)
+//  }
+//
+//  func asInt() -> Int {
+//    return Int(self.timeIntervalSince1970)
+//  }
+//
+//}
+//
+//
+//struct ContractTool {
+//
+//  static func getCurrentStartTime(by st: Int?) -> Int? {
+//    guard let startTime = st?.reMill().asDate() else {
+//      return nil
+//    }
+//    let year = startTime.intervalYear(to: Date())
+//    let time = startTime.addYear(by: year)?.asInt().toMill()
+//    return time
+//  }
+//  /// 通过开始时间计算结束时间
+//  static func getCurrentEndTime(by st: Int?) -> Int? {
+//
+//    guard let startTime = getCurrentStartTime(by: st) else {
+//      return nil
+//    }
+//
+//    let time = startTime.reMill().asDate().addYear(by: 1)?.asInt().toMill()
+//    return time
+//  }
+//}
+//
+//ContractTool.getCurrentStartTime(by: 1519802417000)
+//ContractTool.getCurrentEndTime(by: 1519802417000)
+
+
+enum Test: CaseIterable {
   
-  func reMill() -> Int {
-    return self / 1000
-  }
+  case one
+  case two(name: String)
   
-  func toMill() -> Int {
-    return self * 1000
+  static var allCases: [Test] {
+    return [Test.one, Test.two(name: "")]
   }
 }
 
-extension Date {
-  func intervalYear(to date: Date) -> Int {
-    let calendar = Calendar.current.dateComponents([.year], from: self, to: date)
-    return abs(calendar.year ?? 0)
-  }
- 
-  func addYear(by year: Int) -> Self? {
-    return Calendar.current.date(byAdding: .year, value: year, to: self)
-  }
-  
-  func asInt() -> Int {
-    return Int(self.timeIntervalSince1970)
-  }
-  
-}
+print(Test.allCases)
 
-
-struct ContractTool {
-  
-  static func getCurrentStartTime(by st: Int?) -> Int? {
-    guard let startTime = st?.reMill().asDate() else {
-      return nil
-    }
-    let year = startTime.intervalYear(to: Date())
-    let time = startTime.addYear(by: year)?.asInt().toMill()
-    return time
-  }
-  /// 通过开始时间计算结束时间
-  static func getCurrentEndTime(by st: Int?) -> Int? {
-    
-    guard let startTime = getCurrentStartTime(by: st) else {
-      return nil
-    }
-    
-    let time = startTime.reMill().asDate().addYear(by: 1)?.asInt().toMill()
-    return time
-  }
-}
-
-ContractTool.getCurrentStartTime(by: 1519802417000)
-ContractTool.getCurrentEndTime(by: 1519802417000)
 
 
