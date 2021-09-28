@@ -1,0 +1,20 @@
+PODS:
+  - PromiseKit/CorePromise (6.15.3)
+  - SwiftyStoreKit (0.16.1)
+
+DEPENDENCIES:
+  - PromiseKit/CorePromise
+  - SwiftyStoreKit
+
+SPEC REPOS:
+  trunk:
+    - PromiseKit
+    - SwiftyStoreKit
+
+SPEC CHECKSUMS:
+  PromiseKit: 3b2b6995e51a954c46dbc550ce3da44fbfb563c5
+  SwiftyStoreKit: 6b9c08810269f030586dac1fae8e75871a82e84a
+
+PODFILE CHECKSUM: f2df3deead42722232414a3b2967521b6ebd7382
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,139 @@
+{
+  "identifier" : "7EC1498A",
+  "nonRenewingSubscriptions" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "2781F1BC",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.temporary.id",
+      "referenceName" : null,
+      "type" : "NonRenewingSubscription"
+    }
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "BD77E1B8",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "MyProduct",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "",
+          "displayName" : "我的项目",
+          "locale" : "zh_CN"
+        }
+      ],
+      "productID" : "com.temporary.MyProduct",
+      "referenceName" : "MyProduct",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "29F53D7F",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.temporary.id",
+      "referenceName" : null,
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_askToBuyEnabled" : true,
+    "_billingIssuesEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "CHN",
+    "_timeRate" : 6
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "213B7440",
+      "localizations" : [
+
+      ],
+      "name" : "apple",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+            {
+              "internalID" : "CEAEE0A0",
+              "offerID" : "",
+              "paymentMode" : "free",
+              "referenceName" : "apple",
+              "subscriptionPeriod" : "P3D"
+            }
+          ],
+          "displayPrice" : "0.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "B08B86A1",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "apple",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.razeware.RazeFaces.apple",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "apple",
+          "subscriptionGroupID" : "213B7440",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+            {
+              "internalID" : "2FE26ED6",
+              "offerID" : "",
+              "paymentMode" : "free",
+              "referenceName" : "apple2",
+              "subscriptionPeriod" : "P3D"
+            }
+          ],
+          "displayPrice" : "100",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "C6377469",
+          "introductoryOffer" : {
+            "internalID" : "1ACFE159",
+            "paymentMode" : "free",
+            "subscriptionPeriod" : "P3D"
+          },
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "apple2",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.razeware.RazeFaces.apple2",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "apple2",
+          "subscriptionGroupID" : "213B7440",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}

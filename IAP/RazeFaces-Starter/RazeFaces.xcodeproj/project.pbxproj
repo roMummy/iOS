@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17A72B6F1C503F36007E18ED /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A72B6E1C503F36007E18ED /* ProductCell.swift */; };
+		188E8D1921053D290001E08D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188E8D1821053D290001E08D /* LaunchScreen.storyboard */; };
+		64D62BE21C121CFD0059469C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BD61C121CFD0059469C /* AppDelegate.swift */; };
+		64D62BE41C121CFD0059469C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BD81C121CFD0059469C /* DetailViewController.swift */; };
+		64D62BE61C121CFD0059469C /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BDA1C121CFD0059469C /* IAPHelper.swift */; };
+		64D62BE71C121CFD0059469C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64D62BDB1C121CFD0059469C /* Images.xcassets */; };
+		64D62BEA1C121CFD0059469C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BDE1C121CFD0059469C /* MasterViewController.swift */; };
+		64D62BEC1C121CFD0059469C /* RazeFaceProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D62BE01C121CFD0059469C /* RazeFaceProducts.swift */; };
+		728362201122842E1506ED88 /* Pods_RazeFaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389858DBD2F625CD8B605AEF /* Pods_RazeFaces.framework */; };
+		EB3CEE3F26D49CDC00F18DAC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3CEE3E26D49CDC00F18DAC /* StoreKit.framework */; };
+		EB3CEE4226D4F40600F18DAC /* StoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3CEE4126D4F40600F18DAC /* StoreHelper.swift */; };
+		FEDE1D52209569CC0086FDA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDE1D4E209569CC0086FDA7 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17A72B6E1C503F36007E18ED /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = RazeFaces/ProductCell.swift; sourceTree = SOURCE_ROOT; };
+		188E8D1821053D290001E08D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		389858DBD2F625CD8B605AEF /* Pods_RazeFaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RazeFaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4213279B0550AD5D8330526F /* Pods-RazeFaces.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RazeFaces.debug.xcconfig"; path = "Target Support Files/Pods-RazeFaces/Pods-RazeFaces.debug.xcconfig"; sourceTree = "<group>"; };
+		5DAF8FFB1AF403640068C264 /* RazeFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RazeFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D62BD61C121CFD0059469C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RazeFaces/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		64D62BD81C121CFD0059469C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = RazeFaces/DetailViewController.swift; sourceTree = SOURCE_ROOT; };
+		64D62BDA1C121CFD0059469C /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		64D62BDB1C121CFD0059469C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RazeFaces/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		64D62BDC1C121CFD0059469C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D62BDE1C121CFD0059469C /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = RazeFaces/MasterViewController.swift; sourceTree = SOURCE_ROOT; };
+		64D62BE01C121CFD0059469C /* RazeFaceProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RazeFaceProducts.swift; path = RazeFaces/RazeFaceProducts.swift; sourceTree = SOURCE_ROOT; };
+		E193818323AF24A405D4B951 /* Pods-RazeFaces.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RazeFaces.release.xcconfig"; path = "Target Support Files/Pods-RazeFaces/Pods-RazeFaces.release.xcconfig"; sourceTree = "<group>"; };
+		EB3CEE3E26D49CDC00F18DAC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		EB3CEE4026D4D02300F18DAC /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		EB3CEE4126D4F40600F18DAC /* StoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHelper.swift; sourceTree = "<group>"; };
+		FEDE1D4F209569CC0086FDA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DAF8FF81AF403640068C264 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3CEE3F26D49CDC00F18DAC /* StoreKit.framework in Frameworks */,
+				728362201122842E1506ED88 /* Pods_RazeFaces.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DAF8FF21AF403640068C264 = {
+			isa = PBXGroup;
+			children = (
+				5DAF8FFD1AF403640068C264 /* RageFaces */,
+				5DAF8FFC1AF403640068C264 /* Products */,
+				EB3CEE3D26D49CDC00F18DAC /* Frameworks */,
+				8A97066AB972F0DB92EFF2B4 /* Pods */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+		};
+		5DAF8FFC1AF403640068C264 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DAF8FFB1AF403640068C264 /* RazeFaces.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DAF8FFD1AF403640068C264 /* RageFaces */ = {
+			isa = PBXGroup;
+			children = (
+				EB3CEE4026D4D02300F18DAC /* Configuration.storekit */,
+				64D62BD61C121CFD0059469C /* AppDelegate.swift */,
+				64D62BDA1C121CFD0059469C /* IAPHelper.swift */,
+				64D62BE01C121CFD0059469C /* RazeFaceProducts.swift */,
+				64D62BDE1C121CFD0059469C /* MasterViewController.swift */,
+				64D62BD81C121CFD0059469C /* DetailViewController.swift */,
+				17A72B6E1C503F36007E18ED /* ProductCell.swift */,
+				EB3CEE4126D4F40600F18DAC /* StoreHelper.swift */,
+				64D62BDB1C121CFD0059469C /* Images.xcassets */,
+				188E8D1821053D290001E08D /* LaunchScreen.storyboard */,
+				FEDE1D4E209569CC0086FDA7 /* Main.storyboard */,
+				5DAF8FFE1AF403640068C264 /* Supporting Files */,
+			);
+			name = RageFaces;
+			path = RazeFaces;
+			sourceTree = "<group>";
+		};
+		5DAF8FFE1AF403640068C264 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64D62BDC1C121CFD0059469C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A97066AB972F0DB92EFF2B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4213279B0550AD5D8330526F /* Pods-RazeFaces.debug.xcconfig */,
+				E193818323AF24A405D4B951 /* Pods-RazeFaces.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EB3CEE3D26D49CDC00F18DAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB3CEE3E26D49CDC00F18DAC /* StoreKit.framework */,
+				389858DBD2F625CD8B605AEF /* Pods_RazeFaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DAF8FFA1AF403640068C264 /* RazeFaces */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DAF901C1AF403640068C264 /* Build configuration list for PBXNativeTarget "RazeFaces" */;
+			buildPhases = (
+				B390184AD0E72598070494E0 /* [CP] Check Pods Manifest.lock */,
+				5DAF8FF71AF403640068C264 /* Sources */,
+				5DAF8FF81AF403640068C264 /* Frameworks */,
+				5DAF8FF91AF403640068C264 /* Resources */,
+				D733016A2A6F8CCDF1935E70 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RazeFaces;
+			productName = inappragedemo;
+			productReference = 5DAF8FFB1AF403640068C264 /* RazeFaces.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DAF8FF31AF403640068C264 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Razeware LLC";
+				TargetAttributes = {
+					5DAF8FFA1AF403640068C264 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = N49XYJW69R;
+						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 5DAF8FF61AF403640068C264 /* Build configuration list for PBXProject "RazeFaces" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 5DAF8FF21AF403640068C264;
+			productRefGroup = 5DAF8FFC1AF403640068C264 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DAF8FFA1AF403640068C264 /* RazeFaces */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DAF8FF91AF403640068C264 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				188E8D1921053D290001E08D /* LaunchScreen.storyboard in Resources */,
+				64D62BE71C121CFD0059469C /* Images.xcassets in Resources */,
+				FEDE1D52209569CC0086FDA7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B390184AD0E72598070494E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RazeFaces-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D733016A2A6F8CCDF1935E70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RazeFaces/Pods-RazeFaces-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RazeFaces/Pods-RazeFaces-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DAF8FF71AF403640068C264 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D62BE21C121CFD0059469C /* AppDelegate.swift in Sources */,
+				64D62BEC1C121CFD0059469C /* RazeFaceProducts.swift in Sources */,
+				64D62BE61C121CFD0059469C /* IAPHelper.swift in Sources */,
+				17A72B6F1C503F36007E18ED /* ProductCell.swift in Sources */,
+				64D62BEA1C121CFD0059469C /* MasterViewController.swift in Sources */,
+				EB3CEE4226D4F40600F18DAC /* StoreHelper.swift in Sources */,
+				64D62BE41C121CFD0059469C /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FEDE1D4E209569CC0086FDA7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEDE1D4F209569CC0086FDA7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DAF901A1AF403640068C264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5DAF901B1AF403640068C264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DAF901D1AF403640068C264 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4213279B0550AD5D8330526F /* Pods-RazeFaces.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = N49XYJW69R;
+				INFOPLIST_FILE = "$(SRCROOT)/RazeFaces/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.RazeFaces;
+				PRODUCT_NAME = RazeFaces;
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		5DAF901E1AF403640068C264 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E193818323AF24A405D4B951 /* Pods-RazeFaces.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = N49XYJW69R;
+				INFOPLIST_FILE = "$(SRCROOT)/RazeFaces/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.RazeFacesaa;
+				PRODUCT_NAME = RazeFaces;
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DAF8FF61AF403640068C264 /* Build configuration list for PBXProject "RazeFaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DAF901A1AF403640068C264 /* Debug */,
+				5DAF901B1AF403640068C264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DAF901C1AF403640068C264 /* Build configuration list for PBXNativeTarget "RazeFaces" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DAF901D1AF403640068C264 /* Debug */,
+				5DAF901E1AF403640068C264 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DAF8FF31AF403640068C264 /* Project object */;
+}

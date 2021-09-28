@@ -1,0 +1,24 @@
+{
+    "fileFormatVersion": "1.0.0",
+    "itemInfoEntries": {
+        "6E08B5F3-0A17-4FDA-99F4-9DF478C4D648": {
+            "author": "com.apple.CoreML",
+            "description": "CoreML Model Specification",
+            "name": "vocals.mlmodel",
+            "path": "com.apple.CoreML/vocals.mlmodel"
+        },
+        "C379AF15-A7EE-44A6-883C-8ED66F465D07": {
+            "author": "com.apple.CoreML",
+            "description": "External Metadata Overlay",
+            "name": "Metadata.json",
+            "path": "com.apple.CoreML/Metadata.json"
+        },
+        "D8E545AA-95B1-418E-B45A-1D8885A1BF73": {
+            "author": "com.apple.CoreML",
+            "description": "External FeatureDescription Overlay",
+            "name": "FeatureDescriptions.json",
+            "path": "com.apple.CoreML/FeatureDescriptions.json"
+        }
+    },
+    "rootModelIdentifier": "6E08B5F3-0A17-4FDA-99F4-9DF478C4D648"
+}
