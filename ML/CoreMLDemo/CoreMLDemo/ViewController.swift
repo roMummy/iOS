@@ -17,9 +17,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         do {
-//            let input = vocalsInput(input_3: MLMultiArray()
-
-//            vocalsML?.prediction(input: vocalsInput(input_3: <#T##MLMultiArray#>))
             guard let url = Bundle.main.url(forResource: "vocals", withExtension: "mlmodelc"),
                   let inputUrl = Bundle.main.url(forResource: "100", withExtension: "m4a") else {
                 print("url is nil")
@@ -30,7 +27,13 @@ class ViewController: UIViewController {
             print(model.modelDescription)
 
             vocalsML = vocals(model: model)
-
+            
+            
+            // TODO: - How
+            // 输入: - audio 转换成 4维数组？ MultiArray (Float32 1 × 2 × 512 × 1024)
+            //
+            // 输出：- MultiArray (Float32)
+            // 怎么转换成音频？
             
             let input_3 = try MLMultiArray(shape: [1,2,512,1024], dataType: .float32)
             
