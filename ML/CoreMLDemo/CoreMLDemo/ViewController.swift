@@ -46,6 +46,12 @@ class ViewController: UIViewController {
             guard let bufferData = buffer?.floatChannelData else {
                 return
             }
+            
+            let arr = UnsafeBufferPointer(start: bufferData[0], count: Int(buffer!.frameLength))
+            
+            print(arr)
+            return
+            
             let windowSize = 1024
             let windowNumber = wav_file.length / Int64(windowSize)
             for index in 0 ..< Int(windowNumber) {
@@ -62,6 +68,24 @@ class ViewController: UIViewController {
 
         } catch {
             print(error)
+        }
+    }
+    
+    func PCMBufferToFloatArray(_ pcmBuffer: AVAudioPCMBuffer) -> [[Float]]? {
+        if let floatChannelData = pcmBuffer.floatChannelData {
+            let channelCount = Int(pcmBuffer.format.channelCount)
+            let frameLength = Int(pcmBuffer.frameLength)
+            let stride = pcmBuffer.stride
+            var result: [[Float]] = Array(repeating: Array(repeating: 0.0, count: frameLength), count: channelCount)
+            for channel in 0..<channelCount {
+                for sampleIndex in 0..<frameLength {
+                    result[channel][sampleIndex] = floatChannelData[channel][sampleIndex * stride]
+                }
+            }
+            return result
+        } else {
+            print("format not in Float")
+            return nil
         }
     }
 }
