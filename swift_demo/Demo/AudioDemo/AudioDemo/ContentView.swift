@@ -24,12 +24,12 @@ struct Detail: View {
 }
 
 struct ContentView: View {
-    let titles = ["裁剪", "音频提取"]
     var body: some View {
         NavigationView {
             List {
                 NavigationLink(destination: AudioEdit()) {TitleRow(title: "音频编辑")}
                 NavigationLink(destination: AudioExtract()) {TitleRow(title: "音频提取")}
+                NavigationLink(destination: RecordView()) {TitleRow(title: "音频录制")}
             }
             .listStyle(.plain)
             .navigationTitle("Audio")

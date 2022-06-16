@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB6D74B627F849E00031957D /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D74B527F849E00031957D /* RecordView.swift */; };
+		EB6D74B827F84BC20031957D /* Recordable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6D74B727F84BC20031957D /* Recordable.swift */; };
+		EB931C5C27FD26D000765612 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB931C5B27FD26D000765612 /* String+Ext.swift */; };
 		EB9F8E9227C3744F0033066E /* AudioExtract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F8E9127C3744F0033066E /* AudioExtract.swift */; };
 		EB9F8E9427C38A3F0033066E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9F8E9327C38A3F0033066E /* ImagePicker.swift */; };
+		EBD2F89127FEC3FE00271FCA /* DenoiseTask.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD2F88C27FEC3FD00271FCA /* DenoiseTask.m */; };
+		EBD2F89227FEC3FE00271FCA /* noise_suppression.c in Sources */ = {isa = PBXBuildFile; fileRef = EBD2F89027FEC3FE00271FCA /* noise_suppression.c */; };
 		EBF9F23E27BF2BE60050B50F /* AudioDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF9F23D27BF2BE60050B50F /* AudioDemoApp.swift */; };
 		EBF9F24027BF2BE60050B50F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF9F23F27BF2BE60050B50F /* ContentView.swift */; };
 		EBF9F24227BF2BE80050B50F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBF9F24127BF2BE80050B50F /* Assets.xcassets */; };
@@ -17,8 +22,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB6D74B527F849E00031957D /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		EB6D74B727F84BC20031957D /* Recordable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordable.swift; sourceTree = "<group>"; };
+		EB931C5B27FD26D000765612 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		EB931C5D27FD301A00765612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EB931C5F27FD376500765612 /* libswiftUniformTypeIdentifiers.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftUniformTypeIdentifiers.tbd; path = usr/lib/swift/libswiftUniformTypeIdentifiers.tbd; sourceTree = SDKROOT; };
 		EB9F8E9127C3744F0033066E /* AudioExtract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioExtract.swift; sourceTree = "<group>"; };
 		EB9F8E9327C38A3F0033066E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		EBD2F88A27FEC3FC00271FCA /* AudioDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		EBD2F88B27FEC3FD00271FCA /* DenoiseTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DenoiseTask.h; sourceTree = "<group>"; };
+		EBD2F88C27FEC3FD00271FCA /* DenoiseTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DenoiseTask.m; sourceTree = "<group>"; };
+		EBD2F88E27FEC3FE00271FCA /* noise_suppression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = noise_suppression.h; sourceTree = "<group>"; };
+		EBD2F88F27FEC3FE00271FCA /* dr_wav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dr_wav.h; sourceTree = "<group>"; };
+		EBD2F89027FEC3FE00271FCA /* noise_suppression.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = noise_suppression.c; sourceTree = "<group>"; };
 		EBF9F23A27BF2BE60050B50F /* AudioDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBF9F23D27BF2BE60050B50F /* AudioDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDemoApp.swift; sourceTree = "<group>"; };
 		EBF9F23F27BF2BE60050B50F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,11 +54,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB931C5E27FD376500765612 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB931C5F27FD376500765612 /* libswiftUniformTypeIdentifiers.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBD2F88D27FEC3FE00271FCA /* WebRTC */ = {
+			isa = PBXGroup;
+			children = (
+				EBD2F88E27FEC3FE00271FCA /* noise_suppression.h */,
+				EBD2F88F27FEC3FE00271FCA /* dr_wav.h */,
+				EBD2F89027FEC3FE00271FCA /* noise_suppression.c */,
+			);
+			path = WebRTC;
+			sourceTree = "<group>";
+		};
+		EBD2F89327FEC45400271FCA /* NS */ = {
+			isa = PBXGroup;
+			children = (
+				EBD2F88B27FEC3FD00271FCA /* DenoiseTask.h */,
+				EBD2F88C27FEC3FD00271FCA /* DenoiseTask.m */,
+				EBD2F88D27FEC3FE00271FCA /* WebRTC */,
+			);
+			path = NS;
+			sourceTree = "<group>";
+		};
 		EBF9F23127BF2BE60050B50F = {
 			isa = PBXGroup;
 			children = (
 				EBF9F23C27BF2BE60050B50F /* AudioDemo */,
 				EBF9F23B27BF2BE60050B50F /* Products */,
+				EB931C5E27FD376500765612 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +102,8 @@
 		EBF9F23C27BF2BE60050B50F /* AudioDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EBD2F89327FEC45400271FCA /* NS */,
+				EB931C5D27FD301A00765612 /* Info.plist */,
 				EBF9F23D27BF2BE60050B50F /* AudioDemoApp.swift */,
 				EBF9F23F27BF2BE60050B50F /* ContentView.swift */,
 				EBF9F24127BF2BE80050B50F /* Assets.xcassets */,
@@ -64,6 +111,10 @@
 				EBF9F24B27BFA5B50050B50F /* AudioEdit.swift */,
 				EB9F8E9127C3744F0033066E /* AudioExtract.swift */,
 				EB9F8E9327C38A3F0033066E /* ImagePicker.swift */,
+				EB6D74B527F849E00031957D /* RecordView.swift */,
+				EB6D74B727F84BC20031957D /* Recordable.swift */,
+				EB931C5B27FD26D000765612 /* String+Ext.swift */,
+				EBD2F88A27FEC3FC00271FCA /* AudioDemo-Bridging-Header.h */,
 			);
 			path = AudioDemo;
 			sourceTree = "<group>";
@@ -108,6 +159,7 @@
 				TargetAttributes = {
 					EBF9F23927BF2BE60050B50F = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -146,10 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD2F89227FEC3FE00271FCA /* noise_suppression.c in Sources */,
 				EBF9F24027BF2BE60050B50F /* ContentView.swift in Sources */,
+				EB6D74B627F849E00031957D /* RecordView.swift in Sources */,
 				EB9F8E9427C38A3F0033066E /* ImagePicker.swift in Sources */,
 				EBF9F24C27BFA5B50050B50F /* AudioEdit.swift in Sources */,
 				EB9F8E9227C3744F0033066E /* AudioExtract.swift in Sources */,
+				EB6D74B827F84BC20031957D /* Recordable.swift in Sources */,
+				EB931C5C27FD26D000765612 /* String+Ext.swift in Sources */,
+				EBD2F89127FEC3FE00271FCA /* DenoiseTask.m in Sources */,
 				EBF9F23E27BF2BE60050B50F /* AudioDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,24 +335,35 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = XC6LX2W77X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioDemo/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "\"录音权限\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.AudioDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioDemo/AudioDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,24 +374,34 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AudioDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = XC6LX2W77X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioDemo/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "\"录音权限\"";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/swift",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.demo.AudioDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioDemo/AudioDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

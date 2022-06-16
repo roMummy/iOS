@@ -113,7 +113,7 @@ numbers.flatMap{Int($0)}.reduce(0, +)
 
 ///可选值判等
 let regex = "^Hello$"
-if regex.characters.first == "^" {
+if regex.first == "^" {
     print("相同")
 }
 

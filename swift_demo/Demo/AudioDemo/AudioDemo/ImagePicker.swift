@@ -22,7 +22,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
-        picker.mediaTypes = [UTType.movie.identifier]
+        picker.mediaTypes = ["public.movie"]
         picker.allowsEditing = false
         picker.delegate = context.coordinator
         return picker
