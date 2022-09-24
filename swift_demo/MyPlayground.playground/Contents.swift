@@ -119,17 +119,23 @@ var str = "Hello, playground"
 //ContractTool.getCurrentEndTime(by: 1519802417000)
 
 
-enum Test: CaseIterable {
-  
-  case one
-  case two(name: String)
-  
-  static var allCases: [Test] {
-    return [Test.one, Test.two(name: "")]
-  }
-}
+//enum Test: CaseIterable {
+//
+//  case one
+//  case two(name: String)
+//
+//  static var allCases: [Test] {
+//    return [Test.one, Test.two(name: "")]
+//  }
+//}
+//
+//print(Test.allCases)
 
-print(Test.allCases)
-
+var array = [1, 2, 3]
+//for number in array {
+//  print(number)
+//  array = [4, 5, 6]
+//}
+//print(array)
 
 
