@@ -13,7 +13,6 @@ enum State: StateType {
 enum Event: EventType {
     case getAccount
     case gotoLogin
-    case
     case backToIdle
 }
 
