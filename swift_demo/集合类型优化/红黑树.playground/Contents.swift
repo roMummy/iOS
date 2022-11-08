@@ -6,8 +6,8 @@ var str = "Hello, playground"
 
 ///创建SortedSet协议 来支持有序集合
 public protocol SortedSet: BidirectionalCollection,
-    CustomStringConvertible,
-CustomPlaygroundQuickLookable {
+                           CustomStringConvertible,
+                           CustomPlaygroundDisplayConvertible {
     ///BidirectionalCollection允许从前往后，从后往前遍历
     ///CustomStringConvertible,CustomPlaygroundQuickLookable可以很好的展示出来
     
@@ -343,6 +343,10 @@ extension RedBlackTree.Index: Comparable {
 
 ///支持SortedSet
 extension RedBlackTree: SortedSet {
+    public var playgroundDescription: Any {
+        return 1
+    }
+    
     public init() {
         self = .empty
     }
