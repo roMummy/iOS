@@ -3,6 +3,9 @@
 按照比例适配，支持使用xib，按照标准宽高(375/667)做比例适配
 
 ```
+    fileprivate let standardWidth = 375.0
+    fileprivate let standardHeight = 667.0
+    
     /// 根据比例缩放
     public func scale(_ newValue: CGFloat) -> Double {
         let temp = Double(self)
